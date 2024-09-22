@@ -1,0 +1,101 @@
+---
+title: "pokemons"
+author: "alexis"
+date: "19 avril 2020"
+output: html_document
+---
+
+```{r include=FALSE}
+# preprocess data
+library(readxl)
+library(dplyr)
+dt <- read_excel("lite_pokemons.xlsx")
+types <- dt[names(dt)=="type2"]
+names(types)="type"
+type <- dt[names(dt)=="type1"]
+names(type)="type"
+type <- rbind(type, types)
+type <- type[complete.cases(type), ]
+dt <- table(type) # we get the types with the number of pokemons
+```
+
+```{r include=FALSE}
+# Load ggplot2
+library(ggplot2)
+
+# Create Data
+data <- cbind.data.frame(dt)
+
+# Compute percentages
+data$fraction = data$Freq / sum(data$Freq)
+
+# Compute the cumulative percentages (top of each rectangle)
+data$ymax = cumsum(data$fraction)
+
+# Compute the bottom of each rectangle
+data$ymin = c(0, head(data$ymax, n=-1))
+
+ # Compute label position
+data$labelPosition <- (data$ymax + data$ymin) / 2
+
+# Compute a good label
+data$label <- paste0(data$type, "\n value: ", data$Freq)
+
+# Make the plot
+donut <- ggplot(data, aes(ymax=ymax, ymin=ymin, xmax=4, xmin=3, fill=type)) +
+  geom_rect() +
+  geom_text( x=2, aes(y=labelPosition, label=label, color=type), size=6) + # x here controls label position (inner / outer)
+  scale_fill_brewer(palette=3) +
+  scale_color_brewer(palette=3) +
+  coord_polar(theta="y") +
+  xlim(c(-1, 4)) +
+  theme_void() +
+  theme(legend.position = "none")
+
+donut
+
+```
+
+```{r include=FALSE}
+# load the library
+library(forcats)
+
+# Reorder following the value of another column:
+bars <- data %>%
+  mutate(type = fct_reorder(type, Freq)) %>%
+  ggplot( aes(x=type, y=Freq)) +
+    geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.4) +
+    coord_flip() +
+    xlab("") +
+    theme_bw()
+#put bars in consol
+bars 
+```
+
+```{r include=FALSE}
+# Library
+library(igraph)
+library(networkD3)
+
+# create a dataset:
+data <- data.frame(
+  from=c("Bug","Bug","Bug","Bug","Bug","Bug","Dark","Dark","Dark","Dark","Dark","Dragon","Dragon","Dragon","Electric","Electric","Electric","Fairy","Fairy","Fairy","Fairy","Fairy","Fighting","Fighting","Fighting","Fighting","Fighting","Fighting","Fighting","Fighting","Fire","Fire","Fire","Fire","Fire","Fire","Fire","Flying","Flying","Flying","Flying","Flying","Flying","Ghost","Ghost","Grass","Grass","Grass","Grass","Grass","Grass","Grass","Grass","Ground","Ground","Ground","Ground","Ground","Ground","Ground","Ground","Ice","Ice","Ice","Ice","Ice","Ice","Ice","Ice","Normal", "Poison","Poison","Poison","Poison","Psychic","Psychic","Psychic","Psychic","Psychic","Rock","Rock","Rock","Rock","Rock","Rock","Rock","Rock","Rock","Steel","Steel","Steel","Steel","Steel","Steel","Water","Water","Water","Water","Water"),
+  to=c("Grass","Dark","Psychic","Fire","Flying","Rock","Ghost","Psychic","Bug", "Fairy", "Fighting","Dragon","Fairy", "Ice","Flying","Water","Ground","Fighting", "Dark", "Dragon","Poison", "Steel","Dark", "Ice", "Normal", "Rock", "Steel","Fairy", "Flying", "Psychic","Bug", "Grass", "Ice", "Steel","Ground", "Rock", "Water", "Bug", "Fighting", "Grass", "Electric", "Ice", "Rock","Dark","Psychic","Ground", "Rock", "Water","Bug", "Fire", "Flying", "Ice", "Poison","Electric", "Fire", "Poison", "Rock", "Steel", "Grass", "Ice", "Water", "Dragon", "Flying", "Grass", "Ground", "Fighting", "Fire", "Rock", "Steel","Fighting","Fairy","Grass","Ground","Psychic","Fighting", "Poison","Bug", "Dark","Ghost","Bug", "Fire", "Flying", "Ice","Fighting", "Grass", "Ground", "Steel", "Water","Fairy", "Ice", "Rock","Fighting", "Fire", "Ground","Fire", "Ground", "Rock","Electric", "Grass")
+)
+
+# Plot
+p <- simpleNetwork(data, height="100px", width="100px",        
+        Source = 1,                 # column number of source
+        Target = 2,                 # column number of target
+        linkDistance = 10,          # distance between node. Increase this value to have more space between nodes
+        charge = -900,                # numeric value indicating either the strength of the node repulsion (negative value) or attraction (positive value)
+        fontSize = 14,               # size of the node names
+        fontFamily = "serif",       # font og node names
+        linkColour = "#666",        # colour of edges, MUST be a common colour for the whole graph
+        nodeColour = "#69b3a2",     # colour of nodes, MUST be a common colour for the whole graph
+        opacity = 0.9,              # opacity of nodes. 0=transparent. 1=no transparency
+        zoom = T                    # Can you zoom on the figure?
+        )
+
+# put p in consol
+```
