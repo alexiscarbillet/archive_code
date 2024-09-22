@@ -1,0 +1,138 @@
+---
+title: "dashboard for european reserves of gold"
+author: "alexis carbillet"
+date: "14 janvier 2020"
+output: html_document
+params:
+  country:
+    value: any
+    choices:
+      - Austria
+      - Belgium
+      - Bulgaria
+      - Croatia
+      - Cyprus
+      - Czech Republic
+      - Denmark
+      - Estonia
+      - Finland
+      - France
+      - Germany
+      - Greece
+      - Hungary
+      - Ireland
+      - Italy
+      - Latvia
+      - Lithuania
+      - Luxembourg
+      - Malta
+      - Netherlands
+      - Poland
+      - Portugal
+      - Romania
+      - Slovakia
+      - Slovenia
+      - Spain
+      - Sweden
+      - United Kingdom
+      
+  year:
+    input: slider
+    min: 2003
+    max: 2014
+    step: 1
+    round: 1
+    sep: ''
+    value: 
+    - 2006
+    - 2010
+---
+```{r setup,echo=FALSE,warning=FALSE, message=FALSE}
+library(magrittr)
+countryName <- params$country
+startYear <- params$year[1]
+endYear <- params$year[2]
+if (countryName == "any") { countryName <- "" }
+```
+
+This project use the european reserves by country dataset. This dataset has been already used in the past, you can find its description in this link: <a href="https://alexiscarbillet.github.io/Visualization-Project/" target="_blank">Gold Reserves (website in French)</a>.
+
+When you run the R code, a first window is created. It contains a list of country and a slider. So it is possible to choose the country and the temporal interval. Many studies are possible. In total, 28 countries are available.
+
+The whole project can be found in my <a href="https://alexiscarbillet.github.io/dashboard/" target="_blank">github repository</a>. You can also reach my <a href="https://www.alexis-carbillet.eu/" target="_blank">personnal website</a> if you need to contact me or to discover the other projects I worked on.
+
+```{r echo=FALSE,warning=FALSE, message=FALSE}
+# take the data from the excel
+library(readxl)
+data <- read_excel("C:/Users/alexis/Desktop/projet perso/european-reserves-by-country.xls")
+```
+
+```{r echo=FALSE,warning=FALSE,  message=FALSE}
+colnames(data) <- NULL
+countries <- c("Austria", "Belgium", "Bulgaria", "Croatia",  "Cyprus", "Czech Republic", "Denmark", "Estonia","Finland", "France", "Germany", "Greece",  "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal", "Romania", "Slovakia", "Slovenia", "Spain", "Sweden","United Kingdom")
+z <- which(match(countries,countryName)==1)
+dataset <- data[(2+5*(z-1)):(5*z)]
+dataset <- dataset[3:59,1:4]
+names(dataset)=c("tonnes gold", "$ gold", "$ FX", "$ total")
+```
+Below, you can find an interactive graphic which represent the evolution of the quantity of gold, the value of the gold in \$, the FX in \$ and the total value of the gold reserve of the country studied (in \$ too). You chose to study `r countryName` which is a beautiful country. In the bottom of the graphic, there is a temporal window. It allows to change the beginning and the end of the interval time.
+```{r echo = FALSE, fig.width=8, fig.height=4,warning=FALSE,message=FALSE}
+library(zoo)
+window <- c( yearqtr(startYear), yearqtr(endYear))
+
+dygraphs::dygraph(ts (dataset, start=c(2003), end=c(2014), frequency=4), main = "reserves of this country in tonnes of gold") %>% 
+  dygraphs::dyAxis("y", axisLabelWidth = 30) %>%
+  dygraphs::dyOptions(drawPoints = TRUE, pointSize = 2) %>%
+  dygraphs::dyRangeSelector(dateWindow = window)
+```
+This first graphic use the library dygraphs. This one provides rich facilities for charting time-series data in R, including:
+
+- Automatically plots xts time series objects (or any object convertible to xts).
+
+- Highly configurable axis and series display (including optional second Y-axis).
+
+- Rich interactive features including zoom/pan and series/point highlighting.
+
+- Display upper/lower bars (e.g. prediction intervals) around series.
+
+- Various graph overlays including shaded regions, event lines, and point annotations.
+
+- Use at the R console just like conventional R plots (via RStudio Viewer).
+
+- Seamless embedding within R Markdown documents and Shiny web applications.
+
+In this part, a choropleth map has been drawn. In red are the different countries that ca be selected during the first step. In yellow is represented the one selected.
+
+```{r echo = FALSE, fig.width=10, fig.height=8, warning=FALSE, message=FALSE}
+library(ggplot2)
+library(grid)
+library(rworldmap)
+
+worldMap <- getMap()
+countrie <- c("Austria", "Belgium", "Bulgaria", "Croatia",  "Cyprus", "Czech Rep.", "Denmark", "Estonia","Finland", "France", "Germany", "Greece",  "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal", "Romania", "Slovakia", "Slovenia", "Spain", "Sweden","United Kingdom")
+indEU <- which(worldMap$NAME%in%countrie)
+
+europeCoords <- lapply(indEU, function(i){
+  df <- data.frame(worldMap@polygons[[i]]@Polygons[[1]]@coords)
+  df$region =as.character(worldMap$NAME[i])
+  colnames(df) <- list("long", "lat", "region")
+  return(df)
+})
+
+europeCoords <- do.call("rbind", europeCoords)
+
+value <- sample(x = c(0), size = length(countries), replace = TRUE)
+value[z] = 1
+europeanUnionTable <- data.frame(country = countrie, value = value)
+europeCoords$value <- europeanUnionTable$value[match(europeCoords$region,europeanUnionTable$country)]
+
+P <- ggplot() + geom_polygon(data = europeCoords, aes(x = long, y = lat, group = region, fill = value),colour = "black", size = 0.1) 
+
+P <- P + scale_fill_gradient(name = "Country selected", low = "#FF0000FF", high = "#FFFF00FF", na.value = "grey50")
+
+P <- P + theme(axis.text.x = element_blank(),
+               axis.text.y = element_blank(), axis.ticks.x = element_blank(),
+               axis.ticks.y = element_blank(), axis.title = element_blank(),
+               plot.margin = NULL)
+P
+```

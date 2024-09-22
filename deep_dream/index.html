@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en"> 
+  <head>
+
+    <meta charset="utf-8">
+    <title>Deep dream</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Alexis Carbillet ">
+ 
+    <!-- Control appearance when share by social media -->
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property='og:url' content="" />
+    <meta property="og:type" content="website" />
+
+	<!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/structure.css" rel="stylesheet">
+	
+  </head>
+  
+	<body>
+	
+	<!-- Navigation --> 
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+      <div class="container">
+	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+		  <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#intro">subject</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#results">results</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#team">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+	
+	
+	<header class="masthead" id="intro">
+		<div class="container">
+			<div class="intro-text">
+				<div class="row">
+					<div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 text-center">
+						<h2 class="section-heading text-uppercase">Deep dream with Tensorflow</h2>
+						<br/>
+						<div class="intro-lead-in">How to create deep dream? Does the dream depend of the neural network?</div>
+						<div class="intro-lead-in">The code can be find <a href="https://github.com/alexiscarbillet/deep_dream/">here</a>.</div>
+						<div class="intro-lead-in">The image used can be find <a href="data:image/jpeg;base64,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">here</a>.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+		
+	
+	<section  id="results">
+		<div class="container">
+			<div class="intro-text">
+				<div class="row">
+					<div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 text-center">
+						<h2 class="section-heading text-uppercase">Results</h2>
+					
+						<h3 class="section-subheading text-muted">Here are the results with 4 different numbers of steps: with 100, 400, 1600 and 6400 steps. At the left side, it will be the result of the InceptionV3. At the right side, those for MobileNetV2.</h3>
+						for 100: <img src="img/results/1.PNG" alt="" style="width:250px;height:187px;"><img src="img/results/5.PNG" alt="" style="width:250px;height:187px;"><br>
+						for 400: <img src="img/results/2.PNG" alt="" style="width:250px;height:187px;"><img src="img/results/6.PNG" alt="" style="width:250px;height:187px;"><br>
+						for 1600: <img src="img/results/3.PNG" alt="" style="width:250px;height:187px;"><img src="img/results/7.PNG" alt="" style="width:250px;height:187px;"><br>
+						for 6400: <img src="img/results/4.PNG" alt="" style="width:250px;height:187px;"><img src="img/results/8.PNG" alt="" style="width:250px;height:187px;">
+						<h3 class="section-subheading text-muted">As you can see, the results depends of the neural network used.</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- ========================== TEAM SECTION ============================== -->
+
+    <section  id="team">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-8 col-md-8 col-sm-8 col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-uppercase">Contact</h2>
+            <p class="large text-muted">This website contains the results of deep dream applied for two neural networks. <br> It has been developed by: </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-4 col-md-4 col-sm-4 col-lg-4">
+		  </div>
+          <div class="col-xs-4 col-md-4 col-sm-4 col-lg-4">
+            <div class="team-member">
+              <a href="https://www.alexis-carbillet.eu/"><img class="mx-auto rounded-circle" src="img/team/alexis_carbillet.png" alt=""></a>
+              <a href="https://www.alexis-carbillet.eu/"><h4>Alexis Carbillet</h4></a>
+              <p class="text-muted">French Student</p>
+              <ul class="list-inline social-buttons">
+				<li class="list-inline-item">
+                  <a href="https://github.com/alexiscarbillet">
+                    <i class="fa fa-github"></i>
+                  </a>
+                </li>
+				<li class="list-inline-item">
+                  <a href="https://www.alexis-carbillet.eu/">
+                    <i class="fa fa-home"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://www.linkedin.com/in/alexis-carbillet">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ======================================================================= -->
+
+
+<!-- ======================= FOOTER SECTION ================================ -->
+    <footer>
+      <div class="container">
+        <div class="row">
+		<div class="col-xs-4 col-md-4 col-sm-4 col-lg-4">
+            <span class="copyright">Copyright &copy; 2019</span>
+         </div>
+        </div>
+      </div>
+    </footer>
+
+<!-- ======================================================================= -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
+
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+
+    <!-- Activate the bootstrap tooltip, must be after jQuery load -->
+    <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+    })
+    </script>
+  </body>
+</html>
