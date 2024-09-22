@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en"> 
+  <head>
+
+    <meta charset="utf-8">
+    <title>Retinanet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Alexis Carbillet ">
+ 
+    <!-- Control appearance when share by social media -->
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property='og:url' content="" />
+    <meta property="og:type" content="website" />
+
+	<!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/structure.css" rel="stylesheet">
+	
+  </head>
+  
+	<body>
+	
+	<!-- Navigation --> 
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+      <div class="container">
+	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+		  <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#intro">subject</a>
+            </li>
+		  <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#method">method</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#results">results</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#team">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+	
+	
+	<header class="masthead" id="intro">
+		<div class="container">
+			<div class="intro-text">
+				<div class="row">
+					<div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 text-center">
+						<h2 class="section-heading text-uppercase">Retinanet for object detection</h2>
+						<br/>
+						<div class="intro-lead-in">The task is to use a Retinanet neural network in order to do onject detection. There are 10 classes which are different kind of pollen. The code can be find <a href="https://github.com/alexiscarbillet/retinanet/">here</a>.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+		
+	<section  id="method">
+		<div class="container">
+			<div class="intro-text">
+				<div class="row">
+					<div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 text-center">
+						<h2 class="section-heading text-uppercase">Methods</h2>
+						<h3 class="section-subheading text-muted">First of all, the images are download from their files. A csv contains the path to the images as well as the class of the pollen class and its position. It was necessary to swap the columns of y and x axis in order to train correctly the neural network. This model has been trained on 2000 images with 40 epochs of 100 steps. The images can be download <a href="https://yadi.sk/d/_L1D4B_I3UyV2o/5-Lab">here</a>.</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section  id="results">
+		<div class="container">
+			<div class="intro-text">
+				<div class="row">
+					<div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 text-center">
+						<h2 class="section-heading text-uppercase">Results</h2>
+						<h3 class="section-subheading text-muted">Here are presented some results from the object detection. Below, are the result from the images 0, 200 & 612:</h3>
+						<img src="img/results/obj1.PNG" alt="" width="40%"><img src="img/results/obj2.PNG" alt="" width="40%"><img src="img/results/obj3.PNG" alt="" width="40%">
+						<h3 class="section-subheading text-muted">They are 3 different kind of pollen. The probability that is object is from this class is written at the top of the square containing the object detected.</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- ========================== TEAM SECTION ============================== -->
+
+    <section  id="team">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-8 col-md-8 col-sm-8 col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-uppercase">Contact</h2>
+            <p class="large text-muted">This website contains the methodology and the results of a Retinanet for object detection. <br> It has been developed by: </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-4 col-md-4 col-sm-4 col-lg-4">
+		  </div>
+          <div class="col-xs-4 col-md-4 col-sm-4 col-lg-4">
+            <div class="team-member">
+              <a href="https://www.alexis-carbillet.eu/"><img class="mx-auto rounded-circle" src="img/team/alexis_carbillet.png" alt=""></a>
+              <a href="https://www.alexis-carbillet.eu/"><h4>Alexis Carbillet</h4></a>
+              <p class="text-muted">French Student</p>
+              <ul class="list-inline social-buttons">
+				<li class="list-inline-item">
+                  <a href="https://github.com/alexiscarbillet">
+                    <i class="fa fa-github"></i>
+                  </a>
+                </li>
+				<li class="list-inline-item">
+                  <a href="https://www.alexis-carbillet.eu/">
+                    <i class="fa fa-home"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://www.linkedin.com/in/alexis-carbillet">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ======================================================================= -->
+
+
+<!-- ======================= FOOTER SECTION ================================ -->
+    <footer>
+      <div class="container">
+        <div class="row">
+		<div class="col-xs-4 col-md-4 col-sm-4 col-lg-4">
+            <span class="copyright">Copyright &copy; 2019</span>
+         </div>
+        </div>
+      </div>
+    </footer>
+
+<!-- ======================================================================= -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
+
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+
+    <!-- Activate the bootstrap tooltip, must be after jQuery load -->
+    <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+    })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en"> 
+  <head>
+	
+    <meta charset="utf-8">
+    <title>Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Alexis Carbillet ">
+ 
+    <!-- Control appearance when share by social media -->
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property='og:url' content="" />
+    <meta property="og:type" content="website" />
+
+	<!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/structure.css" rel="stylesheet">
+	
+  </head>
+  
+	<body>
+	
+	<!-- Navigation --> 
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+      <div class="container">
+	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+		  <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#intro">subject</a>
+            </li>
+		  <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#method">method</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#results">results</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#team">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+	
+	
+	<header class="masthead" id="intro">
+		<div class="container">
+			<div class="intro-text">
+				<div class="row">
+					<div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 text-center">
+						<h2 class="section-heading text-uppercase">Subject</h2>
+						<br/>
+						<div class="intro-lead-in">The Travelling Salesman Problem describes a salesman who must travel between N cities. The order in which he does so is something he does not care about, as long as he visits each once during his trip, and finishes where he was at first.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+		
+		
+	<!-- ========================== METHOD SECTION ============================== -->	
+	<section  id="method">
+		<div class="container">
+			<div class="intro-text">
+				<div class="row">
+					<div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 text-center">
+						<h2 class="section-heading text-uppercase">Methods</h2>
+						<h3 class="section-subheading text-muted">In order to find the best solution, an evolutionary algorithm is used. It is based on a population of trajectory and the fitness function is the total distance. The main goal is to select the individual which has the smaller total distance. If an individual from the next generation has a better fitness function then he is selected (see the graph finess function according to each generation). 4 parameters can be defined: the number of generations, the mutation rate, the population size and the elite size (part of population which has the best fitness function).</h3>
+						<h3 class="section-subheading text-muted">The datasets have been taken from the site: <a href="http://www.math.uwaterloo.ca/tsp/vlsi/index.html">university of Waterloo</a> and then have been converted in csv files. You can find it in the same Github repository than the code used. The repository name is: <a href="https://github.com/alexiscarbillet/travelling-salesman/">travelling-salesman</a></h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- ========================================================================= -->
+	
+	<!-- ========================== RESULTS SECTION ============================== -->
+	<section  id="results">
+		<div class="container">
+			<div class="intro-text">
+				<div class="row">
+					<div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 text-center">
+						<h2 class="section-heading text-uppercase">Results</h2>
+						<h3 class="section-subheading text-muted">In this part, the results from the dataset xqf131 are presented: <br>There is two graphics, one representing the best individual per generation and another which represent the best route found in all generations.</h3>
+						<img src="img/results/Figure_1.png" alt="" width="40%"><img src="img/results/Figure_2.png" alt="" width="40%">
+						<h3 class="section-subheading text-muted">As you can see, the best route is not the optimal one. The optimal one could be reach with a bigger number of generation. Indeed, those results have been obtained with a population of 100 individuals where 20 of them were inside the elite part. A mutation rate of 20% has been applied and the number of generation was 3000.</h3>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- ======================================================================= -->
+	
+	
+	<!-- ========================== TEAM SECTION ============================== -->
+    <section  id="team">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-8 col-md-8 col-sm-8 col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-uppercase">Contact</h2>
+            <p class="large text-muted">This website contains the methodology and the results of an evolutionary algorithm applied to the travelling salesman problem. <br> It has been developed by: </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-4 col-md-4 col-sm-4 col-lg-4">
+		  </div>
+          <div class="col-xs-4 col-md-4 col-sm-4 col-lg-4">
+            <div class="team-member">
+              <a href="https://www.alexis-carbillet.eu/"><img class="mx-auto rounded-circle" src="img/team/alexis_carbillet.png" alt=""></a>
+              <a href="https://www.alexis-carbillet.eu/"><h4>Alexis Carbillet</h4></a>
+              <p class="text-muted">French Student</p>
+              <ul class="list-inline social-buttons">
+				<li class="list-inline-item">
+                  <a href="https://github.com/alexiscarbillet">
+                    <i class="fa fa-github"></i>
+                  </a>
+                </li>
+				<li class="list-inline-item">
+                  <a href="https://www.alexis-carbillet.eu/">
+                    <i class="fa fa-home"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://www.linkedin.com/in/alexis-carbillet">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ======================================================================= -->
+
+
+<!-- ======================= FOOTER SECTION ================================ -->
+    <footer>
+      <div class="container">
+        <div class="row">
+		<div class="col-xs-4 col-md-4 col-sm-4 col-lg-4">
+            <span class="copyright">Copyright &copy; 2019</span>
+         </div>
+        </div>
+      </div>
+    </footer>
+
+<!-- ======================================================================= -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
+	<script src="js/structure.js"></script>
+
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+
+    <!-- Activate the bootstrap tooltip, must be after jQuery load -->
+    <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+    })
+    </script>
+  </body>
+</html>

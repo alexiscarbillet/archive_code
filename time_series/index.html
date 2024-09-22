@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en"> 
+  <head>
+
+    <meta charset="utf-8">
+    <title>NN time series</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Alexis Carbillet ">
+ 
+    <!-- Control appearance when share by social media -->
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property='og:url' content="" />
+    <meta property="og:type" content="website" />
+
+	<!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/structure.css" rel="stylesheet">
+	
+  </head>
+  
+	<body>
+	
+	<!-- Navigation --> 
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+      <div class="container">
+	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+		  <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#intro">subject</a>
+            </li>
+		  <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#method">method</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#results">results</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#team">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+	
+	
+	<header class="masthead" id="intro">
+		<div class="container">
+			<div class="intro-text">
+				<div class="row">
+					<div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 text-center">
+						<h2 class="section-heading text-uppercase">Neural network in time series</h2>
+						<br/>
+						<div class="intro-lead-in">How to use neural network to predict the event in the futur? This project answers it by using time series. It only predicts the next value. It could predict many future values, like the 5 next ones. The code can be find <a href="https://github.com/alexiscarbillet/time_series">here</a>. The dataset used can be downloaded<a href="https://storage.googleapis.com/tensorflow/tf-keras-datasets/jena_climate_2009_2016.csv.zip"> here</a>.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+		
+	<section  id="method">
+		<div class="container">
+			<div class="intro-text">
+				<div class="row">
+					<div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 text-center">
+						<h2 class="section-heading text-uppercase">Methods</h2>
+						<h3 class="section-subheading text-muted">First of all, the interesting features have been selected among 14 features available. Then, the model has been trained (20 epochs). Finally some predictions has been done. For more information about the methodology<a href ="https://www.tensorflow.org/tutorials/structured_data/time_series"> here</a>.</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section  id="results">
+		<div class="container">
+			<div class="intro-text">
+				<div class="row">
+					<div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 text-center">
+						<h2 class="section-heading text-uppercase">Results</h2>
+						<h3 class="section-subheading text-muted">You can find here the head of the dataset:</h3>
+						<img src="img/results/dataset.PNG" alt="">
+					</div>
+					<div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 text-center">
+						<h3 class="section-subheading text-muted">You can find below the evolution of the loss and the validation loss according to the epoch number:</h3>
+						<table class="col-xs-12 col-md-12 col-sm-12 col-lg-12 text-center">
+						  <tr><th>Epoch number</th><th>Loss value</th><th>Validation loss value</th></tr>
+						  <tr><th>Epoch 1</th><th>0.3153</th><th>0.2480</th></tr>
+						  <tr><th>Epoch 2</th><th>0.2597</th><th>0.2444</th></tr>
+						  <tr><th>Epoch 3</th><th>0.2591</th><th>0.2299</th></tr>
+						  <tr><th>Epoch 4</th><th>0.2578</th><th>0.2357</th></tr>
+						  <tr><th>Epoch 5</th><th>0.2249</th><th>0.2447</th></tr>
+						  <tr><th>Epoch 6</th><th>0.2341</th><th>0.2513</th></tr>
+						  <tr><th>Epoch 7</th><th>0.2417</th><th>0.2337</th></tr>
+						  <tr><th>Epoch 8</th><th>0.2384</th><th>0.2252</th></tr>
+						  <tr><th>Epoch 9</th><th>0.2451</th><th>0.2352</th></tr>
+						  <tr><th>Epoch 10</th><th>0.2385</th><th>0.2307</th></tr>
+						  <tr><th>Epoch 11</th><th>0.2179</th><th>0.2438</th></tr>
+						  <tr><th>Epoch 12</th><th>0.2297</th><th>0.2479</th></tr>
+						  <tr><th>Epoch 13</th><th>0.2307</th><th>0.2578</th></tr>
+						  <tr><th>Epoch 14</th><th>0.2311</th><th>0.2478</th></tr>
+						  <tr><th>Epoch 15</th><th>0.2385</th><th>0.2361</th></tr>
+						  <tr><th>Epoch 16</th><th>0.2204</th><th>0.2462</th></tr>
+						  <tr><th>Epoch 17</th><th>0.2163</th><th>0.2711</th></tr>
+						  <tr><th>Epoch 18</th><th>0.2238</th><th>0.2613</th></tr>
+						  <tr><th>Epoch 19</th><th>0.2247</th><th>0.2429</th></tr>
+						  <tr><th>Epoch 20</th><th>0.2268</th><th>0.2547</th></tr>
+						</table>
+					</div>
+					<div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 text-center">
+						<h3 class="section-subheading text-muted">Here are the result of 4 predictions:</h3>
+						<img src="img/results/1.PNG" alt=""><img src="img/results/2.PNG" alt=""><img src="img/results/3.PNG" alt=""><img src="img/results/4.PNG" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- ========================== TEAM SECTION ============================== -->
+
+    <section  id="team">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-8 col-md-8 col-sm-8 col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-uppercase">Contact</h2>
+            <p class="large text-muted">This website contains the methodology and the results of a NN used for time series. <br> It has been developed by: </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-4 col-md-4 col-sm-4 col-lg-4">
+		  </div>
+          <div class="col-xs-4 col-md-4 col-sm-4 col-lg-4">
+            <div class="team-member">
+              <a href="https://www.alexis-carbillet.eu/"><img class="mx-auto rounded-circle" src="img/team/alexis_carbillet.png" alt=""></a>
+              <a href="https://www.alexis-carbillet.eu/"><h4>Alexis Carbillet</h4></a>
+              <p class="text-muted">French Student</p>
+              <ul class="list-inline social-buttons">
+				<li class="list-inline-item">
+                  <a href="https://github.com/alexiscarbillet">
+                    <i class="fa fa-github"></i>
+                  </a>
+                </li>
+				<li class="list-inline-item">
+                  <a href="https://www.alexis-carbillet.eu/">
+                    <i class="fa fa-home"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://www.linkedin.com/in/alexis-carbillet">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ======================================================================= -->
+
+
+<!-- ======================= FOOTER SECTION ================================ -->
+    <footer>
+      <div class="container">
+        <div class="row">
+		<div class="col-xs-4 col-md-4 col-sm-4 col-lg-4">
+            <span class="copyright">Copyright &copy; 2019</span>
+         </div>
+        </div>
+      </div>
+    </footer>
+
+<!-- ======================================================================= -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
+
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+
+    <!-- Activate the bootstrap tooltip, must be after jQuery load -->
+    <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+    })
+    </script>
+  </body>
+</html>

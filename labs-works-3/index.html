@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en"> 
+  <head>
+	
+    <meta charset="utf-8">
+    <title>Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Alexis Carbillet ">
+ 
+    <!-- Control appearance when share by social media -->
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property='og:url' content="" />
+    <meta property="og:type" content="website" />
+
+	<!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/structure.css" rel="stylesheet">
+	
+  </head>
+  
+	<body>
+	
+	<!-- Navigation --> 
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+      <div class="container">
+	  <img src="img/logo/Labworks.png" width="8%" alt="" class="logo">
+	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+		  <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#intro">subject</a>
+            </li>
+		  <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#method">method</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#results">results</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#team">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+	
+	
+	<header class="masthead" id="intro">
+		<div class="container">
+			<div class="intro-text">
+				<div class="row">
+					<div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 text-center">
+						<h2 class="section-heading text-uppercase">Subject</h2>
+						<br/>
+						<div class="intro-lead-in">This assignment aims to design an effective multi-label multi-source classifier and then infer demographics of users based on a given dataset collected from multiple social networks. Each dataset contains 10 columns: row ID, educationInfoForAgeGroupEstimation, workInfoForAgeGroupEstimation, gender, realAge, ageGroup, relationship, educationLevel, occupation, income.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+		
+	<section  id="method">
+		<div class="container">
+			<div class="intro-text">
+				<div class="row">
+					<div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 text-center">
+						<h2 class="section-heading text-uppercase">Methods</h2>
+						<h3 class="section-subheading text-muted">First of all, 3 different datasets have been studied. Each of those dataset was not completed. There were some empty parts. They have been filled with "-1". Then the information have been conveted in integer. Then, 14 machine learning techniques have been compared for the prediction of label desired. Three studied have been conducted in order to know which model was the more efficient for which dataset. Finally, a late fusion has been done.</h3>
+					</div>
+					<div class="row" style="padding-top: 5%">
+					
+					  <div class="col-lg-12 text-center">
+						<svg width="75%" height="100">
+						  <line x1="0" y1="50" x2="1000" y2="50" style="stroke:black; stroke-width:1.5" />
+
+						  <circle cx="150" cy="50" r="10" stroke="#f8f9fa" stroke-width="6" fill="#69b3a2" />
+						  <text font-size="13" text-anchor="middle" x="70" y="30" fill="black">Data Processing</text>
+						  <text style="font-style: italic" font-size="13" text-anchor="middle" x="70" y="80" fill="#808080">3 datasets</text>
+
+						  <circle cx="350" cy="50" r="10" stroke="#f8f9fa" stroke-width="6" fill="#69b3a2" />
+						  <text font-size="13" text-anchor="middle" x="250" y="30" fill="black">Data Conversion</text>
+						  <text style="font-style: italic" font-size="13" text-anchor="middle" x="250" y="80" fill="#808080">Strings, NaN</text>
+						  
+						  <circle cx="500" cy="50" r="10" stroke="#f8f9fa" stroke-width="6" fill="#69b3a2" />
+						  <text font-size="13" text-anchor="middle" x="430" y="30" fill="black">Machine Learning</text>
+						  <text style="font-style: italic" font-size="13" text-anchor="middle" x="430" y="80" fill="#808080">14 methods compared</text>
+
+						  <circle cx="700" cy="50" r="10" stroke="#f8f9fa" stroke-width="6" fill="#69b3a2" />
+						  <text font-size="13" text-anchor="middle" x="600" y="30" fill="black">Data Visualization</text>
+						  <text style="font-style: italic" font-size="13" text-anchor="middle" x="600" y="80" fill="#808080">One model/dataset</text>
+						  
+						  <text font-size="13" text-anchor="middle" x="750" y="30" fill="black">Late Fusion</text>
+						</svg>
+					  </div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section  id="results">
+		<div class="container">
+			<div class="intro-text">
+				<div class="row">
+					<div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 text-center">
+						<h2 class="section-heading text-uppercase">Results</h2>
+						<h3 class="section-subheading text-muted">In this part, the results are presented: </h3>
+						<img src="img/results/london.png" alt="" width="40%"><img src="img/results/ny.png" alt="" width="40%"><img src="img/results/singapore.png" alt="" width="40%"><img src="img/results/fusion.png" alt="" width="40%">
+					</div>	
+					<div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 text-center">
+						<h3 class="section-subheading text-muted">The gender has been predicted in this part. The best model for London is kNN 15 neighbors with a F1 score of 0.603. For New York it is the random forest with 0.667 as F1 score. The best prediction for Singapore is obtained with Gradient Boosting and a F1 score of 0.565</h3>
+
+						<h3 class="section-subheading text-muted">About the London Dataset: </h3>
+						<table class="col-xs-12 col-md-12 col-sm-12 col-lg-12 text-center">
+						  <tr><th>Model</th><th>Accuracy</th><th>F1_score</th></tr>
+						  <tr><th>Percepton</th><th>0.696</th><th>0.571</th></tr>
+						  <tr><th>Multi-layer Perceptron</th><th>0.696</th><th>0.571</th></tr> 
+						  <tr><th>Tree</th><th>0.554</th><th>0.556</th></tr>
+						  <tr><th>Logistic Regression</th><th>0.009</th><th>0.0002</th></tr>
+						  <tr><th>kNN 3 neighbors</th><th>0.602</th><th>0.582</th></tr>
+						  <tr><th>kNN 7 neighbors</th><th>0.637</th><th>0.584</th></tr>
+						  <tr><th>kNN 15 neighbors</th><th>0.687</th><th>0.603</th></tr>
+						  <tr><th>SVC</th><th>0.696</th><th>0.571</th></tr>
+						  <tr><th>Random Forest</th><th>0.696</th><th>0.571</th></tr>
+						  <tr><th>Extra Trees</th><th>0.696</th><th>0.571</th></tr>
+						  <tr><th>Bagging</th><th>0.635</th><th>0.594</th></tr>
+						  <tr><th>GaussianNB</th><th>0.696</th><th>0.571</th></tr>
+						  <tr><th>GradientBoosting</th><th>0.672</th><th>0.576</th></tr>
+						  <tr><th>LinearDiscriminantAnalysis</th><th>0.696</th><th>0.571</th></tr>
+						</table>
+
+						<h3 class="section-subheading text-muted">About the NY Dataset: </h3>
+						<table class="col-xs-12 col-md-12 col-sm-12 col-lg-12 text-center">
+						  <tr><th>Model</th><th>Accuracy</th><th>F1_score</th></tr>
+						  <tr><th>Percepton</th><th>0.383</th><th>0.212</th></tr>
+						  <tr><th>Multi-layer Perceptron</th><th>0.378</th><th>0.207</th></tr>
+						  <tr><th>Tree</th><th>0.710</th><th>0.709</th></tr>
+						  <tr><th>Logistic Regression</th><th>0.378</th><th>0.208</th></tr>
+						  <tr><th>kNN 3 neighbors</th><th>0.355</th><th>0.336</th></tr>
+						  <tr><th>kNN 7 neighbors</th><th>0.359</th><th>0.343</th></tr>
+						  <tr><th>kNN 15 neighbors</th><th>0.361</th><th>0.319</th></tr>
+						  <tr><th>SVC</th><th>0.378</th><th>0.208</th></tr>
+						  <tr><th>Random Forest</th><th>0.757</th><th>0.667</th></tr>
+						  <tr><th>Extra Trees</th><th>0.714</th><th>0.622</th></tr>
+						  <tr><th>Bagging</th><th>0.716</th><th>0.703</th></tr>
+						  <tr><th>GaussianNB</th><th>0.378</th><th>0.208</th></tr>
+						  <tr><th>GradientBoosting</th><th>0.725</th><th>0.691</th></tr>
+						  <tr><th>LinearDiscriminantAnalysis</th><th>0.717</th><th>0.632</th></tr>
+						</table>
+
+						
+						<h3 class="section-subheading text-muted">About the Singapore Dataset: </h3>
+						<table class="col-xs-12 col-md-12 col-sm-12 col-lg-12 text-center">
+						  <tr><th>Model</th><th>Accuracy</th><th>F1_score</th></tr>
+						  <tr><th>Percepton</th><th>0.455</th><th>0.285</th></tr>
+						  <tr><th>Multi-layer Perceptron</th><th>0.543</th><th>0.382</th></tr>
+						  <tr><th>Tree</th><th>0.507</th><th>0.508</th></tr>
+						  <tr><th>Logistic Regression</th><th>0.002</th><th>0.022</th></tr>
+						  <tr><th>kNN 3 neighbors</th><th>0.515</th><th>0.515</th></tr>
+						  <tr><th>kNN 7 neighbors</th><th>0.518</th><th>0.515</th></tr>
+						  <tr><th>kNN 15 neighbors</th><th>0.514</th><th>0.508</th></tr>
+						  <tr><th>SVC</th><th>0.543</th><th>0.382</th></tr>
+						  <tr><th>Random Forest</th><th>0.563</th><th>0.563</th></tr>
+						  <tr><th>Extra Trees</th><th>0.543</th><th>0.382</th></tr>
+						  <tr><th>Bagging</th><th>0.547</th><th>0.545</th></tr>
+						  <tr><th>GaussianNB</th><th>0.543</th><th>0.383</th></tr>
+						  <tr><th>GradientBoosting</th><th>0.564</th><th>0.565</th></tr>
+						  <tr><th>LinearDiscriminantAnalysis</th><th>0.548</th><th>0.548</th></tr>
+						</table>
+						  				
+						<h3 class="section-subheading text-muted">Once those results ahve been obtained, a late fusion has been realized. The best classifer for each dataset has been selected and the predictions have been done. A classifier will predict which classifier predicted which dataset.</h3>
+						<!-- ========================== have to complete what is below ============================== -->		
+						<h3 class="section-subheading text-muted">Results of the late fusion: </h3>
+						<table class="col-xs-12 col-md-12 col-sm-12 col-lg-12 text-center">
+						  <tr><th>Model</th><th>Accuracy</th><th>F1_score</th></tr>
+						  <tr><th>Percepton</th><th>0.456</th><th>0.324</th></tr>
+						  <tr><th>Multi-layer Perceptron</th><th>0.614</th><th>0.602</th></tr>
+						  <tr><th>Tree</th><th>0.614</th><th>0.602</th></tr>
+						  <tr><th>Logistic Regression</th><th>0.614</th><th>0.602</th></tr>
+						  <tr><th>kNN 3 neighbors</th><th>0.614</th><th>0.602</th></tr>
+						  <tr><th>kNN 7 neighbors</th><th>0.530</th><th>0.415</th></tr>
+						  <tr><th>kNN 15 neighbors</th><th>0.614</th><th>0.602</th></tr>
+						  <tr><th>SVC</th><th>0.614</th><th>0.602</th></tr>
+						  <tr><th>Random Forest</th><th>0.614</th><th>0.602</th></tr>
+						  <tr><th>Extra Trees</th><th>0.614</th><th>0.602</th></tr>
+						  <tr><th>Bagging</th><th>0.614</th><th>0.602</th></tr>
+						  <tr><th>GaussianNB</th><th>0.614</th><th>0.602</th></tr>
+						  <tr><th>GradientBoosting</th><th>0.614</th><th>0.602</th></tr>
+						  <tr><th>LinearDiscriminantAnalysis</th><th>0.614</th><th>0.602</th></tr>
+						</table>
+						
+					<h3 class="section-subheading text-muted">A lot of classifiers have the same F1 score. The one selected have been random forest.</h3>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- ========================== TEAM SECTION ============================== -->
+
+    <section  id="team">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-8 col-md-8 col-sm-8 col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-uppercase">Contact</h2>
+            <p class="large text-muted">This website contains the methodology and the results of the labworks. <br> It has been developed by: </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-4 col-md-4 col-sm-4 col-lg-4">
+		  </div>
+          <div class="col-xs-4 col-md-4 col-sm-4 col-lg-4">
+            <div class="team-member">
+              <a href="https://www.alexis-carbillet.eu/"><img class="mx-auto rounded-circle" src="img/team/alexis_carbillet.png" alt=""></a>
+              <a href="https://www.alexis-carbillet.eu/"><h4>Alexis Carbillet</h4></a>
+              <p class="text-muted">French Student</p>
+              <ul class="list-inline social-buttons">
+				<li class="list-inline-item">
+                  <a href="https://github.com/alexiscarbillet">
+                    <i class="fa fa-github"></i>
+                  </a>
+                </li>
+				<li class="list-inline-item">
+                  <a href="https://www.alexis-carbillet.eu/">
+                    <i class="fa fa-home"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://www.linkedin.com/in/alexis-carbillet">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ======================================================================= -->
+
+
+<!-- ======================= FOOTER SECTION ================================ -->
+    <footer>
+      <div class="container">
+        <div class="row">
+		<div class="col-xs-4 col-md-4 col-sm-4 col-lg-4">
+            <span class="copyright">Copyright &copy; 2019</span>
+         </div>
+        </div>
+      </div>
+    </footer>
+
+<!-- ======================================================================= -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
+	<script src="js/structure.js"></script>
+
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+
+    <!-- Activate the bootstrap tooltip, must be after jQuery load -->
+    <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+    })
+    </script>
+  </body>
+</html>
