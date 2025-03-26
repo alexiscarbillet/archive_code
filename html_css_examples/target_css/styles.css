@@ -1,0 +1,117 @@
+/* Properties for other selectors */
+*{
+    font-family: Monaco;
+}
+
+.menu, .ll{
+    text-align: center;
+    color:#FA9F42;
+}
+
+.ll{
+    font-size: 30px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #495E57;
+}
+
+.menu-container {
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    background-color:#E0E0E2;
+}
+
+/* Properties for other selectors */
+* {
+    font-family: Monaco;
+}
+
+.menu, .ll {
+    text-align: center;
+    color: #FA9F42;
+}
+
+.ll {
+    font-size: 30px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #495E57;
+}
+
+.menu-container {
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    background-color: #E0E0E2;
+}
+
+
+/* Add rules for the steps mentioned below */
+
+/* Step 1: Add padding of 10px to the section class */
+.section {
+    padding: 10px;
+}
+
+/* Step 2: Change the weight of the font to bold for the label class */
+.label {  
+    font-weight: bold;
+}
+
+/* Step 3: Change styling of the font to italics for the description class */
+.description {
+    font-style: italic;
+}
+
+/* Step 4: Add a 2px solid top border with color #495E57 */
+.description {
+    border-top: 2px solid #495E57;
+}
+
+/* Step 5: Change the margin to 25px and font-size to 12px for the item-name class */
+.item-name {
+    margin: 25px;
+    font-size: 12px;
+}
+
+/* Step 6: Float the contents of the element b to the right */
+b {
+    float: right;
+}
+
+/* Step 7: Add a margin to the top of -15px inside b */
+b {
+    margin-top: -15px;
+}
+
+/* Step 8: Change the color of the element b to darkcyan */
+b {
+    color: darkcyan;
+}
+
+/* Step 9: Add a child combinator for h3 tags that follow the div tag */
+
+/* Step 9.a: Change the font size and margin to 20px */
+div > h3 {
+    font-size: 20px;
+    margin: 20px;
+}
+
+/* Step 9.b: Change the alignment of text to center */
+div > h3 {
+    text-align: center;
+}
+
+/* Step 9.c: Assign a color code of #495E57 to h3 */
+div > h3 {
+    color: #495E57;
+}
+
+/* Step 10: Add an adjacent sibling combinator for items of class low that follow class label and change their color to brown */
+.label + .low {
+    color: brown;
+}
+
+/* Step 11: Add a general sibling combinator for div tags that follow other div tags and change their color to RGB values of 90, 90, 90 */
+div ~ div {
+    color: rgb(90, 90, 90);
+}

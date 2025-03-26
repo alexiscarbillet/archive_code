@@ -1,0 +1,43 @@
+/* Properties for other selectors */
+* {
+    padding: 0;
+    margin: 0;
+    color: pink;
+}
+
+.container {
+    min-height: 100vh;
+    background-color: bisque;
+}
+
+.letters {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 60px;
+}
+
+/* Step 1 to Step 7: Add rules for the 'p' element inside 'letters' class using descendant selector */
+.letters p {
+    text-align: center; /* Step 1 */
+    background-color: rgb(250, 150, 100); /* Step 2 */
+    width: 70px; /* Step 3 */
+    margin-right: 1.5px; /* Step 4 */
+    border-radius: 15%; /* Step 5 */
+    border-color: rgb(250, 125, 75); /* Step 6 */
+    border-style: solid; /* Step 7 */
+}
+
+/* Step 8 and Step 9: Hover effect for even nth-child of 'p' inside 'letters' */
+.letters:hover p:nth-child(even) {
+    transform: rotateY(360deg); /* Step 8 */
+    transition: 0.5s; /* Step 9 */
+}
+
+/* Step 10 and Step 11: Hover effect for odd nth-child of 'p' inside 'letters' */
+.letters:hover p:nth-child(odd) {
+    transform: rotateX(360deg); /* Step 10 */
+    transition: 1.5s; /* Step 11 */
+}
