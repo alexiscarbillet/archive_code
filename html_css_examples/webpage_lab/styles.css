@@ -1,0 +1,19 @@
+/* Style the image with id="photo" */
+#photo {
+    border: 2px solid blue; /* Adds a blue border around the image */
+}
+
+/* Style the main heading (h1) */
+h1 {
+    color: blue; /* Sets the color of the main heading to blue */
+}
+
+/* Style all <h2> elements */
+h2 {
+    color: grey; /* Sets the color of all subheadings to grey */
+}
+
+/* Style all <div> elements */
+div {
+    margin: 4px; /* Adds a 4px margin to all <div> elements */
+}

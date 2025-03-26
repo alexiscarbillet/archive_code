@@ -1,0 +1,39 @@
+/* Set the background color for the body element */
+body {
+    background-color: #E0E0E2; /* Light gray background */
+  }
+  
+  /* Style the main heading (h1 element) */
+  h1 {
+    color: #721817; /* Dark red color */
+  }
+  
+  /* Style the subheadings (h2 elements) */
+  h2 {
+    color: #721817; /* Same dark red color as the h1 element */
+  }
+  
+  /* Center-align text with the .center-text class */
+  .center-text {
+    text-align: center; /* Centers the text */
+  }
+  
+  /* Center the logo image using the #logo ID */
+  #logo {
+    display: block; /* Makes the image a block element */
+    margin-left: auto; /* Automatically adjusts left margin */
+    margin-right: auto; /* Automatically adjusts right margin */
+  }
+  
+  /* Style span elements within h2 tags */
+  h2 > span {
+    color: #FA9F42; /* Warm orange color */
+    font-size: 0.75em; /* Smaller font size */
+  }
+  
+  /* Style the copyright text using the #copyright ID */
+  #copyright {
+    padding-top: 12px; /* Adds top padding for spacing */
+    font-size: 0.75em; /* Smaller font size */
+  }
+  
