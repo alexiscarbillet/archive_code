@@ -1,0 +1,17 @@
+{% extends 'books/base.html' %}
+
+{% block content %}
+<h1>My Books</h1>
+
+{% if books %}
+    <ul>
+        {% for book in books %}
+            <li>
+                <strong>{{ book.title }}</strong> by {{ book.author }} ({{ book.get_status_display }})
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No books yet. Add some!</p>
+{% endif %}
+{% endblock %}

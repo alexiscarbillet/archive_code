@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Book Tracker</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+        <nav>
+            <a href="{% url 'book_list' %}">Home</a> |
+            <a href="{% url 'add_book' %}">Add Book</a> |
+            <form action="{% url 'logout' %}" method="post" style="display:inline;">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        </nav>
+    {% else %}
+        <nav>
+            <a href="{% url 'login' %}">Login</a> |
+            <a href="{% url 'signup' %}">Sign Up</a>
+        </nav>
+    {% endif %}
+    <hr>
+
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
