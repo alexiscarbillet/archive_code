@@ -31,10 +31,10 @@ func main() {
 	/*for i := 0; i < 10; i++ {
 		fmt.Println(i)
 	}*/
-	//numbers := []int{1, 2, 3, 4, 5}
-	//for _, i := range numbers {
-	//	fmt.Println(i)
-	//}
+	/*numbers := []int{1, 2, 3, 4, 5}
+	for _, i := range numbers {
+		fmt.Println(i)
+	}*/
 	/*capitals := map[string]string{
 		"France":  "Paris",
 		"Canada":  "Ottawa",
